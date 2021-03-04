@@ -117,6 +117,7 @@ public class Player : MonoBehaviour
             isAlive = false;
             playerAnimator.SetTrigger("die");
             GetComponent<Rigidbody2D>().velocity = deathSeq;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
